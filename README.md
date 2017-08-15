@@ -24,5 +24,6 @@ This punctuation padding allows a lot fewer match phrases to match a lot more ca
 
 ### TODO:
 * Remove Lodash dependency. May have to watch out for difference between `_.toLower` and `.toLowerCase`. Some of these may limit the version of Node.js this module works with. Not sure if it's worth it.
-* Allow opt-out of some of these transormations. Probably through an options object passed in, instead of function chaining. If you want that, you could use https://github.com/ajgamble-milner/text-cleaner
+* Allow opt-out of some of these transformations. Probably through an options object passed in, instead of function chaining. If you want that, you could use https://github.com/ajgamble-milner/text-cleaner
 * Optionally convert any number into a specific character. `1:00 - 3:00pm` would be converted to `# : 00 - # : 00pm`
+* Add more complicated examples in the tests
