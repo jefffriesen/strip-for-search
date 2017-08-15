@@ -2,6 +2,12 @@
 This is a very basic utility that converts strings of text to something that is easier to match words against. It creates a very consistent, predictable set of words that allow you to match a keyword or keywords against without minimal false positives or missing words.
 
 ```js
+yarn add strip-for-search
+```
+
+```js
+const {stripForSearch} = require('strip-for-search')
+
 stripForSearch('Why do this? It creates a more consistent text-pattern matching output.')
 // -> why do this ? it creates a more consistent text - pattern matching output .
 

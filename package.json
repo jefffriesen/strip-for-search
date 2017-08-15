@@ -1,6 +1,6 @@
 {
   "name": "strip-for-search",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility that strips out most punctuation, extra spaces and diacritical marks. Used to make text pattern matching more reliable",
   "main": "index.js",
   "repository": "git@github.com:jefffriesen/strip-for-search.git",
