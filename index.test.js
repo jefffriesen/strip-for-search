@@ -44,3 +44,15 @@ test('Emdash, endash, hyphen, minus, oh my!', () => {
     'this is too much - only tick - laden beasts convert emdash and endash to hyphens ( - ) . or is that a minus ?'
   )
 })
+
+test('Appending additional text at end', () => {
+  expect(stripForSearch('I speak in incomplete', 'sentences')).toBe(
+    'i speak in incomplete - sentences'
+  )
+})
+
+test('Appending additional text at end, multiple additions', () => {
+  expect(
+    stripForSearch('I speak in incomplete', 'sentences', 'What to do?')
+  ).toBe('i speak in incomplete - sentences - what to do ?')
+})

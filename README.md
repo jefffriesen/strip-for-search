@@ -1,11 +1,19 @@
 # strip-for-search
 This is a very basic utility that converts strings of text to something that is easier to match words against. It creates a very consistent, predictable set of words that allow you to match a keyword or keywords against without minimal false positives or missing words.
 
+```js
+stripForSearch('Why do this? It creates a more consistent text-pattern matching output.')
+// -> why do this ? it creates a more consistent text - pattern matching output .
+
+stripForSearch('Some sort of useful sentence', 'category1', 'category2')
+// -> 'some sort of useful sentence - category1 - category2'
+```
+
 1. All lowercase
 2. Deburr (removing all diacritical marks)
 3. Converting emdash and endash to dash (minus sign)
 4. Adding padding around all punctuation. This allows you to match consistently:
-
+5. Based on business, you can add additional keywords at the end of a sentence.
 
 
 | match phrase | sentence | stripped sentence | match? | Notes
@@ -18,6 +26,7 @@ This is a very basic utility that converts strings of text to something that is 
 | "french cafe" | French Café | french cafe | true
 | "1-3pm" | 1-3pm | 1-3pm | true | endash
 | "1-3pm" | 1—3pm | 1-3pm | true | emdash
+| "- programmatic categorization" | Not saying much. | not saying much . - programmatic categorization | true |
 
 This punctuation padding allows a lot fewer match phrases to match a lot more cases.
 
